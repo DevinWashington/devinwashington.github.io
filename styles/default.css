@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(205, 209, 255);
+    text-align: center;
+    color: rgb(0,0,100);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+a{
+    color:brown;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: line;
+}
+main{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+h2{
+    text-align: center;
+}
+.check-my-link{
+    font-size: small;
+    text-align: center;
+}
+.welcome{
+    font-size: large;
+    text-align: center;
+}
+.meme-image{
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    display: block;
+    border: 10px solid black;
+    border-radius: 5%;
+}
+footer{
+    font-style: italic;
+}
