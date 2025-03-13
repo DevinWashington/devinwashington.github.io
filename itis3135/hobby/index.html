@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sections</title>
+    <link rel="icon" href="favicon.ico"> <!-- Favicon for your site -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+
+    <style>
+        /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+}
+
+/* Sidebar Navigation */
+aside {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    transition: transform 0.3s ease; /* Transition for sliding effect */
+}
+
+aside.hidden {
+    transform: translateX(-100%); /* Move sidebar off screen */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Button to toggle the sidebar */
+#toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+#toggle-btn:hover {
+    background-color: #555;
+}
+
+/* Main content area */
+main {
+    margin-left: 220px; /* Offset for the fixed sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition when sidebar is hidden */
+}
+
+main.shifted {
+    margin-left: 0; /* Move content to the left when sidebar is hidden */
+}
+
+section {
+    display: none; /* Hide all sections by default */
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+section.active {
+    display: block; /* Only display the active section */
+}
+
+/* Add styles for the favicon divider (optional) */
+header nav ul li a::before {
+    content: url('favicon.ico');
+    margin-right: 8px;
+    vertical-align: middle;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    max-width: 200px;
+    max-width: 200px;
+}
+#home-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+    margin-top: 10px;
+
+}
+.container {
+    display: flex;        /* Enables flexbox */
+    gap: 20px;            /* Space between columns */
+}
+
+.column {
+    flex: 1;              /* Each column takes equal space */
+    padding: 10px;        /* Optional: Add padding to columns */
+}
+#producer-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 20px;                             
+    justify-items: center;         
+    align-items: center;                
+}
+
+/* Styling for each image item */
+.image-item {
+    text-align: center;                  
+}
+
+.image-item img {
+    width: 100%;                           /* Make the image width take up the full column width */
+    height: 200px;                         /* Set a fixed height for the images */
+    object-fit: cover;                     /* Ensure the image covers the area without distorting the aspect ratio */
+    border-radius: 8px;                    /* Optional: Adds rounded corners to images */
+}
+
+figcaption {
+    font-style: italic;                   
+    margin-top: 10px;                    
+}
+    </style>
+</head>
+<body>
+    <!-- Main Heading -->
+    <h1>Music Production</h1>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+        <button id="toggle-btn">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-target="about-me">About Me</a></li>
+                <li><a href="#" class="nav-link" data-target="schedule">When to Produce</a></li>
+                <li><a href="#" class="nav-link" data-target="best-locations">Coolest Studios</a></li>
+                <li><a href="#" class="nav-link" data-target="how-to-produce">How to Produce</a></li>
+                <li><a href="#" class="nav-link" data-target="why-fun">Why Producing is Fun!</a></li>
+                <li><a href="#" class="nav-link" data-target="ai-prompts">AI Prompts</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- Home Page START-->
+        <section id="home" class="section">
+            <h2>Home</h2>
+            <div class="container">
+           <div class="column">
+            <p id="p-home1">Music production is a creative process that allows me to explore and shape sound in unique ways. I enjoy the challenge of layering different elements, adjusting tones, and experimenting with rhythms to create something new. Each track is an opportunity to express ideas and emotions, and it's rewarding to see how a collection of sounds can come together to form a cohesive piece. The process of mixing and refining is like solving a puzzle, where small tweaks can have a big impact. Overall, music production is a fulfilling way to engage with both my artistic side and technical skills.</p>
+            </div>
+            
+            <figure>
+            <img src="images/home-desk-producer.png" alt="Music Production" style="width: 100%; height: auto;">
+            <figcaption id="home-caption">Young Man Producing at Desktop</figcaption>
+            
+        </figure>
+        
+        </div>
+        <figure class="image-grid">
+    <div class="image-item">
+        <img src="images/bnyx-guitar.jpg" alt="Image 1">
+        <figcaption>"BNYX"</figcaption>
+    </div>
+    <div class="image-item">
+        <img src="images/wondagurl-portrait.webp" alt="Image 2">
+        <figcaption>"WondaGurl"</figcaption>
+    </div>
+    <div class="image-item">
+        <img src="images/rubin-portrait.jpeg" alt="Image 3">
+        <figcaption>"Rick Rubin"</figcaption>
+    </div>
+    <div class="image-item">
+        <img src="images/alchemist-portrait.jpg" alt="Image 4">
+        <figcaption>"The Alchemist"</figcaption>
+    </div>
+</figure>
+        <!-- Home Page END -->
+
+        </section>
+        <section id="about-me" class="section">
+            <h2>Production and Me</h2>
+            <p>I have been into music for all of my life, playing mulitple instruments as a percussionist. Soon after high school, I learned more about music production and decided to invest in FL Studio. Music production allows me to problem solve and destress, while hopefully making good music in the progress. </p>
+            <figure><img src="images/ai-mixer.png" alt="mixer">
+                <figcaption>"Generic Mixer Interface"</figcaption></figure>
+                <p>While I don't have much experience, and I don't plan on making music a career, I still take pride in what I am able to create. I try to hone in my skills everyday in hopes of making great music. </p>
+
+        </section>
+        <section id="schedule" class="section">
+            <h2>You Can Make Music Anytime!</h2>
+            <div class="container">
+                <div class="column">
+           
+            <p>Gaining inspiration to make beats often comes from the world around you, whether it’s a catchy melody you hear on the radio, the rhythm of nature, or the emotions that arise from personal experiences. Sometimes, inspiration strikes during quiet moments when you least expect it, and other times, it takes digging into different genres or experimenting with new sounds and samples. Listening to music you love can spark creativity, while collaborating with others might open up new perspectives. Even just playing around with a random beat-making tool can lead to unexpected ideas. The key is to stay open, let your surroundings influence you, and never be afraid to experiment, as every new beat could lead to something fresh and exciting.</p>
+            </div>
+            <figure><img src="images/meditating-beats.jpeg" alt="meditating-beats">
+                <figcaption>"Take Time to Gain Inspiration"</figcaption></figure>
+                
+
+                </div>
+        </section>
+
+
+        <section id="best-locations" class="section">
+            <h2>About Us</h2>
+            <p>Content for about us...</p>
+        </section>
+        <section id="how-to-produce" class="section">
+            <h2>About Us</h2>
+            <p>Content for about us...</p>
+        </section>
+        <section id="why-fun" class="section">
+            <h2>About Us</h2>
+            <p>Content for about us...</p>
+        </section>
+        <section id="ai-prompts" class="section">
+            <h2>About Us</h2>
+            <p>Content for about us...</p>
+        </section>
+    </main>
+
+    <script src="components/script.js"></script>
+</body>
+</html>
