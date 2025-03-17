@@ -4,6 +4,7 @@ const toggleButton = document.getElementById('toggle-btn');
 const sidebar = document.getElementById('sidebar');
 const mainContent = document.querySelector('main');
 
+
 // Function to hide all sections
 function hideSections() {
     const sections = document.querySelectorAll('.section');
@@ -14,6 +15,7 @@ function hideSections() {
 
 // Event listener for navigation links
 navLinks.forEach(link => {
+
     link.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default anchor behavior
         const target = link.getAttribute('data-target'); // Get the target section ID
@@ -26,4 +28,11 @@ navLinks.forEach(link => {
 toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('hidden'); // Toggle the hidden class to show/hide the sidebar
     mainContent.classList.toggle('shifted'); // Shift the main content when sidebar is hidden
+});
+// Ensure that the first section ("home") is shown on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Hide all sections first
+    hideSections();
+    // Show the 'home' section by default
+    document.getElementById('home').classList.add('active');
 });
