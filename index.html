@@ -7,19 +7,13 @@
   <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-  <header>
-    <h1>Devin Washington's UNCC Page </h1>
-   
-    
-
-  </header>
+  <div data-include="components/header.html"></div>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
   <main>
     <h2>Home</h2>
     <p class="welcome">Hello, welcome to my UNCC webpage!</p>
 	<img class="meme-image" src="https://preview.redd.it/bptzx7ur4uj11.jpg?width=640&crop=smart&auto=webp&s=b9d9b8fee8be7e8de1af4892c08869a33c11a3f9" alt="html-css-meme">
-	<p class="check-my-link">Check out my links!</p>
 
   
      
@@ -28,41 +22,12 @@
 
   </main>
   <footer>
-	<p>Page Designed By<a href="itis3135/washingtoninc.co/index.html"> Wallaby Enterprises</a>&copy;</p>
-    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-      <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-     </a>
-     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-       </a>
-       <nav>
-        ‡‡ <a href="https://webpages.charlotte.edu/dwashi38/">Charlotte.edu
-            
-          </a>
-          ‡‡ <a href="https://github.com/DevinWashington">Github
-            
-          </a>
-          ‡‡ <a href="https://devinwashington.github.io/">Github.io
-            
-          </a>
-          ‡‡ <a href="https://www.freecodecamp.org/DevinW">freeCodeCamp
-            
-          </a>
-          ‡‡ <a href="https://www.codecademy.com/profiles/cloud5659464790">Codecademy
-            
-          </a>
-        ‡‡ <a href="https://www.linkedin.com/in/devin-washington-8a73111b8/">Linkedin</a>
-      ‡‡ 
-      
-       <a href="itis3135/index.html">ITIS 3135</a>
-      ‡‡ 
-    
-    
-    
-    
-        </nav>
+    <div data-include="components/footer.html"></div>
+
        
   </footer>
+  <script src="scripts/HTMLInclude.js"></script>
+
 </body>
 <script>
   document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
