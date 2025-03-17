@@ -366,7 +366,7 @@ a:visited {
                 <li><strong>Satisfaction of Creation</strong>: There's a unique sense of accomplishment when you create a beat that you're proud of, especially when it evolves from an idea to a finished product.</li>
             </ul>
             <p>Personally, I find some of the greatest joy in producing when I go back to look at old beats I made. Being able to compare old beats to my new ones and seeing how much progress I have made brings much satisfaction. Whether you are just making music for a personal emotional release, or trying to become one of the all-time greats, there is a spot in music production for you.</p>
-            <table>
+            <table id="producer-table">
                 <caption>5 Widely Accredited Producers</caption>
                 <thead>
                     <tr>
@@ -375,7 +375,7 @@ a:visited {
                     </tr>
                 </thead>
                 <tbody>
-                    <a href="https://en.wikipedia.org/wiki/Dr._Dre" target="_blank" class="row-anchor"><tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Dr._Dre">
                         <td>Dr. Dre</td>
                         <td>
                             - Pioneered West Coast hip hop<br>
@@ -384,8 +384,7 @@ a:visited {
                             - Multiple Grammy Awards
                         </td>
                     </tr>
-                </a>
-                    <a><tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Pharrell_Williams">
                         <td>Pharrell Williams</td>
                         <td>
                             - Co-founder of The Neptunes<br>
@@ -394,9 +393,7 @@ a:visited {
                             - Hits like "Happy" and "Get Lucky" (with Daft Punk)
                         </td>
                     </tr>
-                    </a>
-                    <a>
-                    <tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Quincy_Jones">
                         <td>Quincy Jones</td>
                         <td>
                             - Produced Michael Jackson's "Thriller," the best-selling album of all time<br>
@@ -404,9 +401,7 @@ a:visited {
                             - Collaborated with Frank Sinatra, Aretha Franklin, and more
                         </td>
                     </tr>
-                </a>
-                <a>
-                    <tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Rick_Rubin">
                         <td>Rick Rubin</td>
                         <td>
                             - Co-founder of Def Jam Recordings<br>
@@ -415,9 +410,7 @@ a:visited {
                             - Multiple Grammy Awards
                         </td>
                     </tr>
-                    </a>
-                    <a>
-                    <tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Timbaland">
                         <td>Timbaland</td>
                         <td>
                             - Pioneered a unique, futuristic sound in hip hop and R&B<br>
@@ -426,7 +419,6 @@ a:visited {
                             - Multiple Grammy Awards
                         </td>
                     </tr>
-                </a>
                 </tbody>
             </table>
         </section>
@@ -437,5 +429,15 @@ a:visited {
     </main>
 
     <script src="components/script.js"></script>
+    <script>
+        // Add an event listener to each row
+        const rows = document.querySelectorAll('#producer-table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                const url = row.getAttribute('data-url');
+                window.open(url, '_blank'); // Open the link in a new tab
+            });
+        });
+    </script>
 </body>
 </html>

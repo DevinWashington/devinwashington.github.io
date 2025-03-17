@@ -36,3 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show the 'home' section by default
     document.getElementById('home').classList.add('active');
 });
+//Listener for Table Links
+const rows = document.querySelectorAll('#producer-table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                const url = row.getAttribute('data-url');
+                window.open(url, '_blank'); // Open the link in a new tab
+            });
+        });
