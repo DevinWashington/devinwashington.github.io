@@ -245,6 +245,7 @@ a:visited {
     
 </head>
 <body>
+    
 
     <!-- Main Heading -->
     <h1>Music Production</h1>
@@ -527,13 +528,19 @@ a:visited {
 
 <footer>
     <div data-include="devinwashington.github.io/components/footer.html"></div>
-       
+    <p style="text-align:center;">Page Designed By<a href="/itis3135/washingtoninc.co/index.html"> Wallaby Enterprises</a>&copy;</p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+      <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+     </a>
+     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+       </a>
   </footer>
   <script src="devinwashington.github.io/scripts/HTMLInclude.js"></script>
-
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+         document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+  </script>
 </body>
-<script>
-  document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-       document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-</script>
+
 </html>
