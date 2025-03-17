@@ -226,6 +226,20 @@ a:visited {
         .row-anchor {
             display: block;
         }
+        .column-table {
+            flex: 1;
+            padding: 10px;
+            width: 50%;
+            
+        }
+        .container-table {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between; 
+        }
+        #producer-table {
+            width: 100%;
+        }
 
     </style>
 </head>
@@ -262,7 +276,7 @@ a:visited {
             
             <figure>
             <img src="images/black-man-producing.jpeg" alt="Music Production" style="width: 100%; height: auto;">
-            <figcaption id="home-caption">Young Man Making Beats at Desktop</figcaption>
+            <figcaption id="home-caption">Prompt: Young Man Making Beats at Desktop</figcaption>
             
         </figure>
         
@@ -288,13 +302,21 @@ a:visited {
 </figure>
         </section>
                 <!-- Home Page END -->
+
         <section id="about-me" class="section">
             <h2>Production and Me</h2>
-            <p>I have been into music for all of my life, playing mulitple instruments as a percussionist. Soon after high school, I learned more about music production and decided to invest in FL Studio. Music production allows me to problem solve and destress, while hopefully making good music in the progress. </p>
-            <figure><img src="images/ai-mixer.png" alt="mixer">
+            <div class="container" style="justify-content: center;">
+                
+            <figure><img src="images/ai-mixer.png" alt="mixer" style="size: 200%;">
                 <figcaption>Prompt: "Generic Mixer Interface"</figcaption></figure>
+                <figure><img src="images/home-studio.jpeg" alt="mixer">
+                    <figcaption>"My Home Studio"</figcaption></figure>
+                </div>
+                
+                    <p>I have been into music for all of my life, playing mulitple instruments as a percussionist. Soon after high school, I learned more about music production and decided to invest in FL Studio. Music production allows me to problem solve and destress, while hopefully making good music in the progress. </p>
                 <p>While I don't have much experience, and I don't plan on making music a career, I still take pride in what I am able to create. I try to hone in my skills everyday in hopes of making great music. </p>
-
+           
+        
         </section>
         <section id="schedule" class="section">
             <h2>You Can Make Music Anytime!</h2>
@@ -359,13 +381,10 @@ a:visited {
                 </div>
         </section>
         <section id="why-fun" class="section">
-            <h2>Why Making Beats is Fun</h2>
-            <ul>
-                <li><strong>Creative Expression</strong>: Making beats lets you express your emotions and ideas through music, allowing for endless creative possibilities.</li>
-                <li><strong>Experimentation</strong>: The process of trying out different sounds, patterns, and techniques is exciting and can lead to unexpected, amazing results.</li>
-                <li><strong>Satisfaction of Creation</strong>: There's a unique sense of accomplishment when you create a beat that you're proud of, especially when it evolves from an idea to a finished product.</li>
-            </ul>
-            <p>Personally, I find some of the greatest joy in producing when I go back to look at old beats I made. Being able to compare old beats to my new ones and seeing how much progress I have made brings much satisfaction. Whether you are just making music for a personal emotional release, or trying to become one of the all-time greats, there is a spot in music production for you.</p>
+            <h2 style="text-align: center;">Why Making Beats is Fun</h2>
+           
+            <div class="container-table">
+            <div class="column-table">
             <table id="producer-table">
                 <caption>5 Widely Accredited Producers</caption>
                 <thead>
@@ -421,16 +440,71 @@ a:visited {
                     </tr>
                 </tbody>
             </table>
+        </div>
+    <div class="column-table">
+        <ul style="list-style-type: none;" style="padding-left: 0; margin-top: 30px;">
+            <li><strong>Creative Expression</strong>: Making beats lets you express your emotions and ideas through music, allowing for endless creative possibilities.</li>
+            <li><strong>Experimentation</strong>: The process of trying out different sounds, patterns, and techniques is exciting and can lead to unexpected, amazing results.</li>
+            <li><strong>Satisfaction of Creation</strong>: There's a unique sense of accomplishment when you create a beat that you're proud of, especially when it evolves from an idea to a finished product.</li>
+        </ul>
+        <p style="padding-top: 40px;">Personally, I find some of the greatest joy in producing when I go back to look at old beats I made. Being able to compare old beats to my new ones and seeing how much progress I have made brings much satisfaction. Whether you are just making music for a personal emotional release, or trying to become one of the all-time greats, there is a spot in music production for you.</p>
+            <figure>
+                <img src="images/black-man-producing.jpeg" alt="Music Production" style="width: 100%; height: auto; padding-top: 50px;">
+                <figcaption id="home-caption">Prompt: Young Man Making Beats at Desktop</figcaption>
+                
+            </figure>
+            </div>
+            </div>
         </section>
         <section id="ai-prompts" class="section">
-            <h2>About Us</h2>
-            <p>Content for about us...</p>
+            <h2>AI Prompts Used For This Website</h2>
+           
+            <table>
+                <caption>List of Prompts Used</caption>
+                <thead>
+                    <tr>
+                        <th>AI Prompt</th>
+                        <th>Purpose</th>
+                        <th>Results/Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>"Generate a table with the top 5 producers of all time and their accomplishments."</td>
+                        <td>To create a table listing the top producers and their key achievements.</td>
+                        <td>Created a table that lists the top 5 music producers with their notable accomplishments.</td>
+                    </tr>
+                    <tr>
+                        <td>"Suggest a good color palette for a website with a dark theme."</td>
+                        <td>To choose an appropriate color palette for a website with a dark theme.</td>
+                        <td>Suggested colors such as dark gray, teal, and gold, which work well with a dark theme.</td>
+                    </tr>
+                    <tr>
+                        <td>"Write a paragraph on the joy of making beats."</td>
+                        <td>To describe the creative and enjoyable process of making beats.</td>
+                        <td>Generated a paragraph highlighting the fun, creativity, and satisfaction of producing beats.</td>
+                    </tr>
+                    <tr>
+                        <td>"Create a clickable table row in HTML that redirects to a URL."</td>
+                        <td>To make a table row clickable and redirect to a link when clicked.</td>
+                        <td>Generated a working solution using JavaScript to make the entire row clickable and redirect to a URL.</td>
+                    </tr>
+                    <tr>
+                        <td>"How can I create a moveable and toggleable navigation bar in HTML and JavaScript?"</td>
+                        <td>To implement a navigation bar that can be toggled and moved around on the page.</td>
+                        <td>Generated a solution with HTML, CSS, and JavaScript to create a sidebar navigation bar that can be toggled with a button and smoothly animated.</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
         </section>
     </main>
-
+/
     <script src="components/script.js"></script>
     <script>
         // Add an event listener to each row
+    //GENERATED BY CHATGPT
         const rows = document.querySelectorAll('#producer-table tbody tr');
         rows.forEach(row => {
             row.addEventListener('click', () => {
