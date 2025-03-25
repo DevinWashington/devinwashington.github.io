@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd; /* Light grey border */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light grey background for header */
+            font-weight: bold;
+        }
+
+       
+
+        tr:hover {
+            background-color: #eaeaea; /* Highlight row on hover */
+        }
+        .complex-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .complex-table th, .complex-table td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .complex-table th {
+            background-color: darkslategrey; /* Darker header */
+            color: white;
+        }
+
+        .complex-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light row */
+        }
+
+        .complex-table tr:nth-child(odd) {
+            background-color: #ffffff; /* Darker row */
+        }
+
+        figure {
+            font-family: Arial, sans-serif;
+        }
+        .complex-table  tr:hover {
+            background-color: #eaeaea; /* Highlight row on hover */
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+             font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <main>
+    <h2>HTML Tables</h2>
+    <h3>My Tabluar Data</h3>
+    <ul>
+        <li>
+            <strong>Devin Washington</strong><br>
+            Years at Draining Wallaby: 5<br>
+            Email: WallabyMaster@gmail.com
+        </li>
+        <li>
+            <strong>Alice Green</strong><br>
+            Years at Draining Wallaby: 12<br>
+            Email: alicegreen@example.com
+        </li>
+        <li>
+            <strong>Bob Lee</strong><br>
+            Years at Draining Wallaby: 17<br>
+            Email: boblee@example.com
+        </li>
+        <li>
+            <strong>Charlie Brown</strong><br>
+            Years at Draining Wallaby: 14<br>
+            Email: charliebrown@example.com
+        </li>
+        <li>
+            <strong>David Clark</strong><br>
+            Years at Draining Wallaby: 8<br>
+            Email: davidclark@example.com
+        </li>
+        <li>
+            <strong>Eva Adams</strong><br>
+            Years at Draining Wallaby: 20<br>
+            Email: evaadams@example.com
+        </li>
+        <li>
+            <strong>Frank Harris</strong><br>
+            Years at Draining Wallaby: 19<br>
+            Email: frankharris@example.com
+        </li>
+        <li>
+            <strong>Grace King</strong><br>
+            Years at Draining Wallaby: 3<br>
+            Email: graceking@example.com
+        </li>
+        <li>
+            <strong>Hannah Scott</strong><br>
+            Years at Draining Wallaby: 15<br>
+            Email: hannahscott@example.com
+        </li>
+        <li>
+            <strong>Ian Walker</strong><br>
+            Years at Draining Wallaby: 9<br>
+            Email: ianwalker@example.com
+        </li>
+    </ul>
+    
+    <h3>Employee Data in a Simple Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Years at Draining Wallaby!</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Devin Washington</td>
+                <td>5</td>
+                <td>WallabyMaster@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Alice Green</td>
+                <td>12</td>
+                <td>alicegreen@example.com</td>
+            </tr>
+            <tr>
+                <td>Bob Lee</td>
+                <td>17</td>
+                <td>boblee@example.com</td>
+            </tr>
+            <tr>
+                <td>Charlie Brown</td>
+                <td>14</td>
+                <td>charliebrown@example.com</td>
+            </tr>
+            <tr>
+                <td>David Clark</td>
+                <td>8</td>
+                <td>davidclark@example.com</td>
+            </tr>
+            <tr>
+                <td>Eva Adams</td>
+                <td>20</td>
+                <td>evaadams@example.com</td>
+            </tr>
+            <tr>
+                <td>Frank Harris</td>
+                <td>19</td>
+                <td>frankharris@example.com</td>
+            </tr>
+            <tr>
+                <td>Grace King</td>
+                <td>3</td>
+                <td>graceking@example.com</td>
+            </tr>
+            <tr>
+                <td>Hannah Scott</td>
+                <td>15</td>
+                <td>hannahscott@example.com</td>
+            </tr>
+            <tr>
+                <td>Ian Walker</td>
+                <td>9</td>
+                <td>ianwalker@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Employee Data in a Complex Table</h3>
+    <figure>
+       
+        <table class="complex-table">
+            <thead>
+                <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Years at Draining Wallaby!</th>
+                    <th scope="col">Monthly Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="1">CEO</td>
+                    <td>Devin Washington</td>
+                    <td>WallabyMaster@gmail.com</td>
+                    <td>21</td>
+                    
+                    <td id="salary-monthly">$15,000</td>
+                </tr>
+                <tr>
+                    <td rowspan="1">Marketing</td>
+                    <td>Alice Green</td>
+                    <td>alicegreen@example.com</td>
+                    <td>12</td>
+                   
+                    <td id="salary-monthly">$6,200</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Sales</td>
+                    <td>Bob Lee</td>
+                    <td>boblee@example.com</td>
+                    <td>17</td>
+                   
+                    <td id="salary-monthly">$7,500</td>
+                </tr>
+                <tr>
+                    <td>Charlie Brown</td>
+                    <td>charliebrown@example.com</td>
+                    <td>14</td>
+                  
+                    <td id="salary-monthly">$7,000</td>
+                </tr>
+                <tr>
+                    <td>David Clark</td>
+                    <td>davidclark@example.com</td>
+                    <td>8</td>
+                  
+                    <td id="salary-monthly">$6,800</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">HR</td>
+                    <td>Eva Adams</td>
+                     <td>evaadams@example.com</td>
+                    <td id="salary-monthly">20</td>
+                   
+                    <td>$8,000</td>
+                </tr>
+                <tr>
+                    <td>Frank Harris</td>
+                    <td>frankharris@example.com</td>
+                    <td>19</td>
+                  
+                    <td id="salary-monthly">$7,800</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Operations</td>
+                    <td>Grace King</td>
+                    <td>graceking@example.com</td>
+                    <td>3</td>
+                   
+                    <td id="salary-monthly">$5,200</td>
+                </tr>
+                <tr>
+                    <td>Hannah Scott</td>
+                    <td>hannahscott@example.com</td>
+                    <td>15</td>
+                   
+                    <td id="salary-monthly">$6,400</td>
+                </tr>
+                <tr>
+                    <td>IT</td>
+                    <td>Ian Walker</td>
+                    <td>ianwalker@example.com</td>
+                    <td>9</td>
+                
+                    <td id="salary-monthly">$6,000</td>
+                </tr>
+                <!-- Total row -->
+                <tr>
+                    <th colspan="3">Total Years of Service</th>
+                    <td>102</td>
+                    <td>$76,900</td>
+                </tr>
+            </tbody>
+        </table>
+        <caption>Employee Information</caption>
+    </figure>
+</main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+           
+      </footer>
+      <script src="scripts/HTMLInclude.js"></script>
+    
+</body>
+</html>
