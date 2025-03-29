@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Introduction Page</title>
+    <style>
+       body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* AliceBlue */
+            color: #333; /* Dark Gray */
+            margin: 10;
+            padding: 10;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* White */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50; /* Dark Blue */
+        }
+        p {
+            line-height: 1.6;
+        }
+        button {
+            background-color: #3498db; /* Blue */
+            color: #ffffff; /* White */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker Blue */
+        }
+        .alert {
+            color: #e74c3c; /* Red */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .course-input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .course-input input {
+            margin-right: 10px;
+        }
+        .data-container img {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 400px;
+            height: auto;
+        }
+        
+        .data-container button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<main>
+<body>
+    <div data-include="components/header.html"></div>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <h2>BYO Intro</h2>
+  <h3>Build Your Own Introduction Page</h3>
+    <form id="dataForm" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="mascot">Mascot:</label>
+        <input type="text" id="mascot" name="mascot"><br><br>
+
+        <label for="image">Image Input (JPEG or PNG):</label>
+        <input type="file" id="image" name="image" accept="image/jpeg, image/png"><br><br>
+
+        <label for="caption">Image Caption:</label>
+        <input type="text" id="image-caption" name="image-caption"><br><br>
+
+        <label for="pers-background">Personal Background:</label>
+        <input type="text" id="pers-background" name="pers-background"><br><br>
+
+        <label for="prof-background">Professional Background:</label>
+        <input type="text" id="prof-background" name="prof-background"><br><br>
+       
+        <label for="acad-background">Academic Background:</label>
+        <input type="text" id="acad-background" name="acad-background"><br><br>
+
+        <label for="web-background">Background in Web Development:</label>
+        <input type="text" id="web-background" name="web-background"><br><br>
+
+        <label for="computer">Primary Computer Platform:</label>
+        <input type="text" id="computer" name="computer"><br><br>
+
+        
+        
+
+        <div id="courses">
+            <label>Enrolled Courses:</label><br>
+            <button type="button" onclick="addCourse()">Add Course</button><br><br>
+        </div>
+
+        <label for="funny">Funny Thing?:</label>
+        <input type="text" id="funny-thing" name="funny-thing"><br><br>
+
+        <label for="anything">Anything Else?:</label>
+        <input type="text" id="anything" name="anything"><br><br>
+
+        
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="alertMessage" class="alert" style="display: none;"></div>
+
+    <div id="dataContainer" class="data-container" style="display: none;"></div>
+
+    <script src="scripts/survey.js">
+       
+    </script>
+    </main>
+     <footer>
+        <div data-include="components/footer.html"></div>
+           
+      </footer>
+      <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
