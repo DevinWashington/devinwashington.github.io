@@ -45,7 +45,7 @@ function submitForm() {
             if (!computerBackground) missingFields.push('Computer Background');
             if (!funnyBackground) missingFields.push('Funny Thing!');
             if (!otherBackground) missingFields.push('Anything Else');
-            if (!imageFile || imageFile.size === 0) missingFields.push('Image');
+            //if (!imageFile || imageFile.size === 0) missingFields.push('Image');
     if (missingFields.length > 0) {
         alertMessage.textContent = `Please fill out the following fields: ${missingFields.join(', ')}.`;
         alertMessage.style.display = 'block';
@@ -81,22 +81,22 @@ function submitForm() {
             `<strong>Funny Thing!:</strong> ${funnyBackground}`,
             `<strong>Anything Else:</strong> ${otherBackground}`
         ];
-        items.forEach=(item) => {
+        items.forEach(item => {
             const listItem = document.createElement('li');
             listItem.innerHTML = item;
             listElement.appendChild(listItem);
-        };
+        });
         const courses = formData.getAll('courses[]');
         if (courses.length > 0) {
         const coursesSection = document.createElement('li');
                 coursesSection.innerHTML = '<strong>Courses:</strong>';
                 const coursesList = document.createElement('ul');
 
-                courses.forEach=(course) => {
+                courses.forEach(course => {
                     const courseItem = document.createElement('li');
                     courseItem.textContent = course;
                     coursesList.appendChild(courseItem);
-                };
+                });
                 coursesSection.appendChild(coursesList);
                 listElement.appendChild(coursesSection);
             }
