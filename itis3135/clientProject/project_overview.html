@@ -7,16 +7,22 @@
     <title>Project Overview</title>
     <style>
         body {
-            display: flex;
             justify-content: center;
-            align-items: center;
             flex-direction: column;
             min-height: 100vh;
             margin: 10px;
             padding:10px;
+            background-color: #f0f8ff; /* AliceBlue */
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+
         }
         .image-container {
             position: relative;
+                        display: flex;
+                        align-items: center;
+
+
             display: inline-block;
             margin: 20px;
         }
@@ -30,24 +36,43 @@
             text-align: center;
             margin-top: 10px;
         }
+        a {
+    color: #e74c3c; /* Red color for links */
+    text-decoration: none;
+}
+a:visited {
+            color: #9b59b6; /* Purple color for visited link */
+        }
+
+        /* Style for link on hover */
+        a:hover {
+            color: #3498db /* Red color when hovered */
+        }
     </style>
     
 </head>
 <div data-include="/itis3135/components/header.html"></div>
 <body>
+    <h2>Project Overview</h2>
     
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <main>
     <div class="image-container">
         <img src="/itis3135/clientProject/Images/clientSiteMap.png" alt="Image 1">
-        <div class="caption">Caption for Image 1</div>
+        <div class="caption">Site Map</div>
     </div>
     <div class="image-container">
         <img src="/itis3135/clientProject/Images/clientWireFrame.png" alt="Image 2">
-        <div class="caption">Caption for Image 2</div>
+        <div class="caption">Home Page WireFrame</div>
     </div>
-
-    <script>
+    <h3>Dynamic Functionality</h3>
+    <p>For this porject, the main functionality will be the ability to listen to beats, and to upload beats or request services.</p>
+    <ul>
+        <li><a href="https://jumpshare.com/file-sharing/mp3" target="_blank">JumpShare</a>: Upload an Mp3</li>
+        <li><a href="https://doc.arkansas.gov/online-services-center/" target="_blank">Arkansas Government</a>: Contact through an email template</li>
+    </ul>
+<!-- Script for zoom -->    
+ <script>
         document.querySelectorAll('.image-container img').forEach(img => {
             let scale = 1;
             img.addEventListener('click', () => {
