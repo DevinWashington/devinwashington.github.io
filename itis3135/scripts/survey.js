@@ -45,7 +45,7 @@ function submitForm() {
             if (!computerBackground) missingFields.push('Computer Background');
             if (!funnyBackground) missingFields.push('Funny Thing!');
             if (!otherBackground) missingFields.push('Anything Else');
-            //if (!imageFile || imageFile.size === 0) missingFields.push('Image');
+            if (!imageFile || imageFile.size === 0) missingFields.push('Image');
     if (missingFields.length > 0) {
         alertMessage.textContent = `Please fill out the following fields: ${missingFields.join(', ')}.`;
         alertMessage.style.display = 'block';
