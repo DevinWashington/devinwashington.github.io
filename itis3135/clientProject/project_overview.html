@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Images with Unlimited Zoom</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+        .image-container img {
+            width: 600px;
+            height:auto;
+            transition: transform 0.2s;
+            cursor: zoom-in;
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="/itis3135/"></div>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <main>
+    <div class="image-container">
+        <img src="/itis3135/clientProject/Images/clientSiteMap.png" alt="Image 1">
+        <div class="caption">Caption for Image 1</div>
+    </div>
+    <div class="image-container">
+        <img src="/itis3135/clientProject/Images/clientWireFrame.png" alt="Image 2">
+        <div class="caption">Caption for Image 2</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(img => {
+            let scale = 1;
+            img.addEventListener('click', () => {
+                scale += 0.5;
+                img.style.transform = `scale(${scale})`;
+                img.style.cursor = scale > 1 ? 'zoom-out' : 'zoom-in';
+            });
+            img.addEventListener('dblclick', () => {
+                scale = 1;
+                img.style.transform = `scale(${scale})`;
+                img.style.cursor = 'zoom-in';
+            });
+        });
+    </script>
+    </main>
+    <footer>
+        <div data-include="itis3135/components/footer.html"></div>
+           
+      </footer>
+</body>
+</html>
