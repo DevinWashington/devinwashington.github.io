@@ -81,22 +81,22 @@ function submitForm() {
             `<strong>Funny Thing!:</strong> ${funnyBackground}`,
             `<strong>Anything Else:</strong> ${otherBackground}`
         ];
-        items.forEach(item => {
+        items.forEach=(item) => {
             const listItem = document.createElement('li');
             listItem.innerHTML = item;
             listElement.appendChild(listItem);
-        });
+        };
         const courses = formData.getAll('courses[]');
-        if(courses.length > 0) {
+        if(courses.length > 0){
         const coursesSection = document.createElement('li');
                 coursesSection.innerHTML = '<strong>Courses:</strong>';
                 const coursesList = document.createElement('ul');
 
-                courses.forEach(course => {
+                courses.forEach=(course) => {
                     const courseItem = document.createElement('li');
                     courseItem.textContent = course;
                     coursesList.appendChild(courseItem);
-                });
+                };
                 coursesSection.appendChild(coursesList);
                 listElement.appendChild(coursesSection);
             }
