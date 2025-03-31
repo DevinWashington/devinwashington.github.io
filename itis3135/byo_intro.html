@@ -65,8 +65,9 @@
         
     </style>
 </head>
-<main>
+
 <body>
+    <main>
     <div data-include="components/header.html"></div>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <h2>BYO Intro</h2>
@@ -81,7 +82,7 @@
         <label for="image">Image Input (JPEG or PNG):</label>
         <input type="file" id="image" name="image" accept="image/jpeg, image/png"><br><br>
 
-        <label for="caption">Image Caption:</label>
+        <label for="caption" id="caption">Image Caption:</label>
         <input type="text" id="image-caption" name="image-caption"><br><br>
 
         <label for="pers-background">Personal Background:</label>
@@ -107,7 +108,7 @@
             <button type="button" onclick="addCourse()">Add Course</button><br><br>
         </div>
 
-        <label for="funny">Funny Thing?:</label>
+        <label for="funny-thing" id="funny-thing">Funny Thing?:</label>
         <input type="text" id="funny-thing" name="funny-thing"><br><br>
 
         <label for="anything">Anything Else?:</label>
