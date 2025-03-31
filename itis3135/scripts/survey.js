@@ -87,7 +87,7 @@ function submitForm() {
             listElement.appendChild(listItem);
         };
         const courses = formData.getAll('courses[]');
-        if(courses.length > 0){
+        if (courses.length > 0) {
         const coursesSection = document.createElement('li');
                 coursesSection.innerHTML = '<strong>Courses:</strong>';
                 const coursesList = document.createElement('ul');
