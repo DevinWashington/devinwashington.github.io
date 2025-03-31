@@ -6,17 +6,7 @@
 
     <title>Project Overview</title>
     <style>
-        body {
-            justify-content: center;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 10px;
-            padding:10px;
-            background-color: #f0f8ff; /* AliceBlue */
-            color: #333;
-            font-family: 'Roboto', sans-serif;
-
-        }
+        
         .image-container {
             position: relative;
                         display: flex;
@@ -25,6 +15,17 @@
 
             display: inline-block;
             margin: 20px;
+        }
+        body {
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 10px;
+            padding:10px;
+            background-color: #f0f8ff; 
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+
         }
         .image-container img {
             width: 600px;
@@ -73,7 +74,7 @@ a:visited {
     </ul>
 <!-- Script for zoom -->    
  <script>
-        document.querySelectorAll('.image-container img').forEach(img => {
+        document.querySelectorAll('.image-container img').forEach=(img) => {
             let scale = 1;
             img.addEventListener('click', () => {
                 scale += 0.5;
@@ -85,7 +86,7 @@ a:visited {
                 img.style.transform = `scale(${scale})`;
                 img.style.cursor = 'zoom-in';
             });
-        });
+        };
     </script>
     </main>
     <footer>
