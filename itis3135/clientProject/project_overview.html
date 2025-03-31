@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Interactive Images with Unlimited Zoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Overview</title>
     <style>
         body {
             display: flex;
@@ -10,7 +12,8 @@
             align-items: center;
             flex-direction: column;
             min-height: 100vh;
-            margin: 0;
+            margin: 10px;
+            padding:10px;
         }
         .image-container {
             position: relative;
@@ -19,7 +22,7 @@
         }
         .image-container img {
             width: 600px;
-            height:auto;
+            height: 300px;
             transition: transform 0.2s;
             cursor: zoom-in;
         }
@@ -28,9 +31,11 @@
             margin-top: 10px;
         }
     </style>
+    
 </head>
+<div data-include="/itis3135/components/header.html"></div>
 <body>
-    <div data-include="/itis3135/"></div>
+    
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <main>
     <div class="image-container">
@@ -59,8 +64,9 @@
     </script>
     </main>
     <footer>
-        <div data-include="itis3135/components/footer.html"></div>
+        <div data-include="/itis3135/components/footer.html"></div>
            
       </footer>
+      <script src="/itis3135/scripts/HTMLInclude.js"></script>
 </body>
 </html>
