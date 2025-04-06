@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Production Tools and Plugins</title>
+    <title>JpProd Resources</title>
     <link rel="stylesheet" href="styles/client.css">
     <style>
         
@@ -45,12 +45,16 @@
         }
     </style>
 </head>
+
 <body>
+        <!-- header -->
     <div data-include="client_header.html"></div>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 
 <main>
+        <!-- DAWS -->
+
 <div class="container">
     <div class="section" id="daws-section">
         <h2>DAWs (Digital Audio Workstations) <span class="arrow">&#9660;</span></h2>
@@ -69,7 +73,7 @@
             </div>
         </div>
     </div>
-
+    <!-- VSTs -->
     <div class="section" id="vst-section">
         <h2>VST Plugins <span class="arrow">&#9660;</span></h2>
         <div class="tool">
@@ -87,7 +91,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Hardware -->
     <div class="section" id="hardware-section">
         <h2>Hardware <span class="arrow">&#9660;</span></h2>
         <div class="tool">
@@ -107,6 +111,7 @@
     </div>
 </div>
 </main>
+    <!-- Script to hide sections -->
 <script>
     document.querySelectorAll('.section h2').forEach(header => {
         header.addEventListener('click', () => {
