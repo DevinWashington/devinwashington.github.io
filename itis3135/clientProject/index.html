@@ -54,10 +54,11 @@
             text-align: center;
         }
         .slideshow-container img {
-            width: 500px;
-            height: auto;
-            justify-content: center;
+            width: 100%;
+            height: 500px; /* Set a fixed height */
+            object-fit: cover; /* Ensure the image covers the entire area */
         }
+
     </style>
 </head>
 <body>
@@ -73,23 +74,35 @@
         <div class="text">Recording Studio</div>
     </div>
     <div class="slides">
-        <img src="image2.jpg" alt="Image 2">
-        <div class="text">Caption Text 2</div>
+        <img src="Images/serum2-by-xfer.png" alt="Image 2">
+        <div class="text">"Serum 2" By Xfer, Inc.</div>
     </div>
     <div class="slides">
-        <img src="image3.jpg" alt="Image 3">
-        <div class="text">Caption Text 3</div>
+        <img src="Images/my-fl-workstation.png" alt="Image 3">
+        <div class="text">My FL-Studio 21 Workstation</div>
     </div>
 </div>
 
 <div class="column-container">
     <div class="column">
         <h2>Column 1</h2>
-        <p>This is some text for the first column. You can add more content here as needed.</p>
+        <p>This is some text for the first column. You can add more content here as needed. This can be your personal description</p>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
     </div>
     <div class="column">
         <h2>Column 2</h2>
-        <p>This is some text for the second column. You can add more content here as needed.</p>
+        <p>This is some text for the second column. You can add more content here as needed. This can be your profesional description</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
     </div>
 </div>
 </main>
@@ -107,7 +120,7 @@
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}    
         slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 10000); // Change image every 2 seconds
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
     }
 </script>
 
