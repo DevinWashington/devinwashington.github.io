@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/client.css">
+
+    <title>Beat List</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #0f3460;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('Images/list-banner.jpeg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .beat-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .beat {
+            width: 48%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .beat img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .beat-description {
+            flex: 1;
+        }
+        .beat-description h3 {
+            margin: 0;
+        }
+        .beat-description p {
+            margin: 5px 0;
+        }
+        .beat audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .download-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="client_header.html"></div>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <main>
+<div class="container">
+    <div class="banner"></div>
+    <h1>Beat List</h1>
+    <div class="beat-list">
+        <div class="beat">
+            <img src="beat1.jpg" alt="Beat 1">
+            <div class="beat-description">
+                <h3>Beat Name 1</h3>
+                <p>Description of Beat 1. This beat has a smooth and relaxing vibe.</p>
+                <audio controls>
+                    <source src="beat1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="beat1.mp3" download class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="beat">
+            <img src="beat2.jpg" alt="Beat 2">
+            <div class="beat-description">
+                <h3>Beat Name 2</h3>
+                <p>Description of Beat 2. This beat is energetic and perfect for a workout.</p>
+                <audio controls>
+                    <source src="beat2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="beat2.mp3" download class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="beat">
+            <img src="beat3.jpg" alt="Beat 3">
+            <div class="beat-description">
+                <h3>Beat Name 3</h3>
+                <p>Description of Beat 3. This beat has a catchy rhythm and great for dancing.</p>
+                <audio controls>
+                    <source src="beat3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="beat3.mp3" download class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="beat">
+            <img src="beat4.jpg" alt="Beat 4">
+            <div class="beat-description">
+                <h3>Beat Name 4</h3>
+                <p>Description of Beat 4. This beat is mellow and perfect for relaxing.</p>
+                <audio controls>
+                    <source src="beat4.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="beat4.mp3" download class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="beat">
+            <img src="beat5.jpg" alt="Beat 5">
+            <div class="beat-description">
+                <h3>Beat Name 5</h3>
+                <p>Description of Beat 5. This beat has a strong bass and is great for parties.</p>
+                <audio controls>
+                    <source src="beat5.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="beat5.mp3" download class="download-button">Download</a>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+</body>
+<footer>
+    <div data-include="client_footer.html"></div>
+</footer>
+<script src="/itis3135/scripts/HTMLInclude.js"></script>
+</html>

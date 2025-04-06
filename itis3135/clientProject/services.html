@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/client.css">
+
+    <title>Contact Us</title>
+    <style>
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .services {
+            margin-bottom: 20px;
+        }
+        .services h2 {
+            margin-bottom: 10px;
+        }
+        .services p {
+            margin-bottom: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .radio-group {
+            margin-bottom: 15px;
+        }
+        .radio-group label {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="client_header.html"></div>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <main>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <div class="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of services to help you with your music production needs:</p>
+        <p>- Beat Production</p>
+        <p>- Mixing and Mastering</p>
+        <p>- Sound Design</p>
+        <p>- Music Consultation</p>
+    </div>
+    <form id="contact-form" action="mailto:jpproductions910@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="service">Select a Service</label>
+        <div class="radio-group">
+            <label><input type="radio" name="service" value="Beat Production"> Beat Production</label>
+            <label><input type="radio" name="service" value="Mixing and Mastering"> Mixing and Mastering</label>
+            <label><input type="radio" name="service" value="Sound Design"> Sound Design</label>
+            <label><input type="radio" name="service" value="Music Consultation"> Music Consultation</label>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
+    </main>
+
+</body>
+<footer>
+    <div data-include="client_footer.html"></div>
+</footer>
+<script src="/itis3135/scripts/HTMLInclude.js"></script>
+
+</html>
