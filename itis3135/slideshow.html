@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centered Slideshow</title>
+    <link rel="stylesheet" href="styles/default.css">
     <style>
         body {
-            display: flex;
+            display: absolute;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
@@ -18,6 +17,10 @@
             position: relative;
             width: 80%;
             max-width: 800px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding-top: 30px;;
         }
         .slide {
             display: none;
@@ -31,16 +34,18 @@
         .caption-container {
             text-align: center;
             padding: 10px;
-            font-size: 18px;
-            color: #333;
+            font-size: 22px;
         }
         .nav-buttons {
             display: flex;
-            justify-content: space-between;
             width: 80%;
             max-width: 800px;
             margin-top: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
         }
+        
         .prev, .next {
             cursor: pointer;
             padding: 20px;
@@ -54,6 +59,12 @@
         }
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
+        }
+        ul{
+            list-style-type:circle;
+            margin: 0;
+            padding-left: 20px;
+            text-align: left
         }
     </style>
 </head>
@@ -109,12 +120,33 @@
     </div>
 </div>
 
+
 <div class="caption-container" id="caption"></div>
 
 <div class="nav-buttons">
     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
     <a class="next" onclick="changeSlide(1)">&#10095;</a>
 </div>
+
+<h2>Google Gemini Was Used To Generate All Images</h2>
+    <ul>
+           <li>Generate an Image of D- Desk</li>
+            <li>Generate an Image of E- Egg</li>
+            <li>Generate an Image of V- Violin</li>
+            <li>Generate an Image of I- Iron</li>
+            <li>Generate an Image of N- Necklace</li>
+            <li>Generate an Image of W- Watch</li>
+            <li>Generate an Image of A- Apple</li>
+            <li>Generate an Image of S- Scissors</li>
+            <li>Generate an Image of H- Hammer</li>
+            <li>Generate an Image of I- Ice</li>
+            <li>Generate an Image of N- Newspaper</li>
+            <li>Generate an Image of G- Guitar</li>
+            <li>Generate an Image of T- Television</li>
+            <li>Generate an Image of O- Orange</li>
+            <li>Generate an Image of N- Notebook</li>
+        </ul>
+    
 
 <script>
     let slideIndex = 0;
