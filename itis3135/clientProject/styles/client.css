@@ -22,7 +22,10 @@
 }
 .navbar a:hover{
     background-color: #ddd;
-    color: black;
+    color: #f0a500;
+}
+a:hover{
+    color: #f0a500;
 }
 body {
     font-family: Arial, sans-serif;
@@ -101,4 +104,8 @@ button:hover {
     bottom: 8px;
     width: 100%;
     text-align: center;
+}
+a{
+    color: #e94560;
+    text-decoration: none;
 }
