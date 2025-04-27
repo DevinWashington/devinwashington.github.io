@@ -35,6 +35,22 @@ body {
     color: var(--text-color);
 }
 
+
+ body.light-mode {
+     background-color: white;
+     color: black;
+     }
+     .container.light-mode {
+     background-color: white;
+     color: black;
+     }
+     label.light-mode {
+     color: black;
+     background-color: white;
+     }
+    
+    
+
 .container {
     max-width: 600px;
     margin: 50px auto;
