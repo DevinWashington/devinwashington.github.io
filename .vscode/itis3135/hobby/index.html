@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draining Wallaby's Hobby Site</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-hobby.png">
+ 
+    
+
+    <style>
+        /* General styling */
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c; /* Dark Charcoal Background */
+    color: #ffffff; /* White text for readability */
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db; /* Dark background for the header */
+    color: white;
+    margin: 0;
+    
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar Navigation */
+aside {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #3498db; /* Sidebar background */
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+aside.hidden {
+    transform: translateX(-100%);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Dark Gray hover effect */
+}
+
+/* Button to toggle the sidebar */
+#toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background-color: #3498db; /* Primary Blue Button */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+#toggle-btn:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+}
+
+/* Main content area */
+main {
+    margin-left: 220px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+main.shifted {
+    margin-left: 0;
+}
+
+section {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+section.active {
+    display: block;
+}
+
+/* Styling for images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    max-width: 200px;
+    max-width: 200px;
+}
+
+.home-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+    margin-top: 10px;
+}
+
+/* Container for columns */
+.container {
+    display: flex;
+    
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Styling for each image item */
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Image caption */
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Centering text */
+.p-center {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.favorite-ppl-heading {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+a {
+    color: #e74c3c; /* Red color for links */
+    text-decoration: none;
+}
+a:visited {
+            color: #9b59b6; /* Purple color for visited link */
+        }
+
+        /* Style for link on hover */
+        a:hover {
+            color: #3498db /* Red color when hovered */
+        }
+        /* Style for Table*/
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+       
+        tr:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .row-anchor {
+            display: block;
+        }
+        .column-table {
+            flex: 1;
+            padding: 10px;
+            width: 50%;
+            
+        }
+        .container-table {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between; 
+        }
+        #producer-table {
+            width: 100%;
+        }
+
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    
+
+    <!-- Main Heading -->
+    <h1>Music Production</h1>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+        <button id="toggle-btn">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-target="home">Home ✦ . ⁺  . ✦ . ⁺  . ✦</a></li>
+                <li><a href="#" class="nav-link" data-target="about-me">About Me ✦ . ⁺  . ✦ . ⁺  . </a></li>
+                <li><a href="#" class="nav-link" data-target="schedule">When to Produce ✦ . ⁺  . </a></li>
+                <li><a href="#" class="nav-link" data-target="best-locations">Coolest Studios ✦ . ⁺  . </a></li>
+                <li><a href="#" class="nav-link" data-target="how-to-produce">How to Produce ✦ . ⁺  . </a></li>
+                <li><a href="#" class="nav-link" data-target="why-fun">Producing is Fun ✦ . ⁺  . </a></li>
+                <li><a href="#" class="nav-link" data-target="ai-prompts">AI Prompts ✦ . ⁺  . ✦ . ⁺  </a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- Home Page START-->
+        <section id="home" class="section">
+            <h2>Home</h2>
+            <h3 class="favorite-ppl-heading">What is Music Production?</h3>
+            <div class="container">
+           <div class="column">
+            <p id="p-home1">Music production is a creative process that allows me to explore and shape sound in unique ways. I enjoy the challenge of layering different elements, adjusting tones, and experimenting with rhythms to create something new. Each track is an opportunity to express ideas and emotions, and it's rewarding to see how a collection of sounds can come together to form a cohesive piece. The process of mixing and refining is like solving a puzzle, where small tweaks can have a big impact. Overall, music production is a fulfilling way to engage with both my artistic side and technical skills.</p>
+            </div>
+            
+            <figure>
+            <img src="images/black-man-producing.jpeg" alt="Music Production" style="width: 100%; height: auto;">
+            <figcaption class="home-caption">Prompt: Young Man Making Beats at Desktop</figcaption>
+            
+        </figure>
+        
+        </div>
+        <h3 class="favorite-ppl-heading">Some of My Favorite Current Producers</h3>
+        
+<figure class="image-grid">
+    <div class="image-item">
+        <figure>
+        <img src="images/bnyx-guitar.jpg" alt="Image 1">
+        <figcaption><a target="_blank" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fproducergrind.com%2Fblogs%2Fblog%2Fwho-is-bnyx-producer-taking-over-the-music-industry&psig=AOvVaw2C0DMSJHUuMkKUjAWTjY3-&ust=1741804966471000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLil393XgowDFQAAAAAdAAAAABAE
+            ">BNYX</a></figcaption>
+        </figure>
+    </div>
+    <div class="image-item">
+        <figure>
+        <img src="images/wondagurl-portrait.webp" alt="Image 2">
+        <figcaption><a target="_blank" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rollingstone.com%2Fpro%2Ffeatures%2Fwondagurl-future-25-1179520%2F&psig=AOvVaw0WXeAzTpuX8E1NlLXqR-W0&ust=1741805040411000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCB6cjXgowDFQAAAAAdAAAAABAJ
+            ">WondaGurl</a></figcaption>
+        </figure>
+    </div>
+    <div class="image-item">
+        <figure>
+        <img src="images/rubin-portrait.jpeg" alt="Image 3">
+        <figcaption><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fthe-riff%2Frick-rubin-the-shaman-of-hip-hop-50611cf4652f&psig=AOvVaw14H6mHXiIFvi2aArQOaT2T&ust=1741805345363000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCKwuvYgowDFQAAAAAdAAAAABAE
+            ">Rick Rubin</a></figcaption>
+        </figure>
+    </div>
+    <div class="image-item">
+        <figure>
+        <img src="images/alchemist-portrait.jpg" alt="Image 4">
+        <figcaption><a target="_blank" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftidal.com%2Fmagazine%2Farticle%2Falchemist-backstory%2F1-87240&psig=AOvVaw1JNSsilR6mFCCoMzBhxJEa&ust=1741805431367000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiWqIjZgowDFQAAAAAdAAAAABAJ
+            ">The Alchemist</a></figcaption>
+        </figure>
+    </div>
+</figure>
+
+        </section>
+                <!-- Home Page END -->
+
+        <section id="about-me" class="section">
+            <h2>Production and Me</h2>
+            <div class="container" style="justify-content: center;">
+                
+            <figure><img src="images/ai-mixer.png" alt="mixer" >
+                <figcaption>Prompt: "Generic Mixer Interface"</figcaption></figure>
+                <figure><img src="images/home-studio.jpeg" alt="mixer">
+                    <figcaption>"My Home Studio"</figcaption></figure>
+                </div>
+                
+                    <p>I have been into music for all of my life, playing mulitple instruments as a percussionist. Soon after high school, I learned more about music production and decided to invest in FL Studio. Music production allows me to problem solve and destress, while hopefully making good music in the progress. </p>
+                <p>While I don't have much experience, and I don't plan on making music a career, I still take pride in what I am able to create. I try to hone in my skills everyday in hopes of making great music. </p>
+           
+        
+        </section>
+        <section id="schedule" class="section">
+            <h2>You Can Make Music Anytime!</h2>
+            <div class="container">
+                <div class="column">
+           
+            <p>Gaining inspiration to make beats often comes from the world around you, whether it’s a catchy melody you hear on the radio, the rhythm of nature, or the emotions that arise from personal experiences. Sometimes, inspiration strikes during quiet moments when you least expect it, and other times, it takes digging into different genres or experimenting with new sounds and samples. Listening to music you love can spark creativity, while collaborating with others might open up new perspectives. Even just playing around with a random beat-making tool can lead to unexpected ideas. The key is to stay open, let your surroundings influence you, and never be afraid to experiment, as every new beat could lead to something fresh and exciting.</p>
+            </div>
+            <figure><img src="images/meditating-beats.jpeg" alt="meditating-beats">
+                <figcaption>Prompt: "generate an image of a man mediating to gain inspiration for making beats"</figcaption>
+          
+            </figure>
+
+                
+
+                </div>
+        </section>
+
+
+        <section id="best-locations" class="section">
+            <h2>Studio Locations</h2>
+            <p>Recording studios are where the magic takes place. Whether is it making the beats from scratch, or getting artists in the booth to record, the technoolgy available in a massive studio environment allows for great creativity. </p>
+            <figure class="image-grid">
+                <div class="image-item">
+                    <figure>
+                    <img src="images/lightship-studio.jpeg" alt="Image 1">
+                    <figcaption>LightShip 95 Recording Studio</figcaption>
+                </figure>
+                </div>
+                <div class="image-item">
+                    <figure>
+                    <img src="images/neon-future-studio.webp" alt="Image 2">
+                    <figcaption>Steve Aoki’s Neon Future Cave</figcaption>
+                </figure>
+                </div>
+                <div class="image-item">
+                    <figure>
+                    <img src="images/blackbird-studio.webp" alt="Image 3">
+                    <figcaption>Blackbird Studios</figcaption>
+                </figure>
+                </div>
+                <div class="image-item">
+                    <figure>
+                    <img src="images/real-world-studios.jpg" alt="Image 4">
+                    <figcaption>Real World Studios</figcaption>
+                </figure>
+                </div>
+                
+            </figure>
+            <p class="p-center">The architecture of a recording studio plays a crucial role in shaping the creative process. The design and layout of the space can influence how sound is captured, processed, and experienced. Acoustic treatments, room size, and the arrangement of equipment all contribute to the quality of the recording environment, which in turn affects the artist’s performance and the producer’s workflow. A well-designed studio can inspire creativity, providing an atmosphere that encourages experimentation and innovation. Conversely, poor acoustics or a cramped, disorganized space can hinder productivity and limit artistic expression, making the studio’s architecture an essential component in fostering creativity and achieving the desired sound. </p>
+        </section>
+        <section id="how-to-produce" class="section">
+            <h2>Music Production Takes Time</h2>
+            <div class="container">
+                <div class="column">
+           
+            <p>Learning music prodcution and how to make beats is a long and tedious process. Like anything else, the only way to improve is to keep practicing and honing your skills. Most likely, your first 100 beats will sound terrible. As a producer, you can't let these setbacks keep you down. </p>
+            <figure><img src="images/fustrated-producer.jpeg" alt="fustration">
+                <figcaption>"5 Beats a Day for Three Summers"</figcaption></figure>
+                <p>It takes an insane amount of time to become great a making beats, so don't expect to become <a href="https://www.grammy.com/news/how-metro-boomin-became-in-demand-rap-producer-2024-grammys" target="_blank">"Metro Boomin"</a> overnight. Here are some tips on how you can start getting better at making beats.</p>
+                <h3>5 Tips for Getting Better at Making Beats</h3>
+                <ul>
+                    <li><strong>Study Music Theory Basics</strong>: Understanding the fundamentals of music theory, such as scales, chords, and rhythm, can greatly improve your beat-making skills. You don’t need to be a classically trained musician, but knowing how to build a chord progression, understanding timing, and recognizing key signatures will help you create more dynamic and interesting beats.</li>
+                    <li><strong>Experiment with Drum Patterns</strong>: Drum patterns are the backbone of most beats. Experiment with different kick, snare, and hi-hat patterns to create rhythmically unique grooves. Try using swing or off-beat variations, layer different percussion sounds, and experiment with various time signatures to give your beats more complexity.</li>
+                    <li><strong>Learn from Your Favorite Producers</strong>: Take the time to study the beats of your favorite producers. Break down their tracks and see how they structure their drums, melodies, and transitions. Try recreating their beats or using their techniques in your own work. This can help you understand their process and inspire new ideas for your own beats.</li>
+                    <li><strong>Use Samples and Sound Design</strong>: Don’t be afraid to experiment with samples and sound design. Sampling can provide you with unique textures and sounds that can inspire new ideas. Learning how to manipulate and tweak samples, or even create your own sounds, will allow you to develop a signature style and expand your creative range.</li>
+                    <li><strong>Practice, Practice, Practice</strong>: Like any skill, the more you practice making beats, the better you’ll get. Set aside time each day or week to make beats, even if it’s just for fun. The more you work, the more you’ll develop your unique style and improve your technique. Don’t be afraid to make mistakes—sometimes the best beats come from experimentation!</li>
+                </ul>
+                
+
+                </div>
+                </div>
+        </section>
+        <section id="why-fun" class="section">
+            <h2 style="text-align: center;">Why Making Beats is Fun</h2>
+           
+            <div class="container-table">
+            <div class="column-table">
+            <table id="producer-table">
+                <caption>5 Widely Accredited Producers</caption>
+                <thead>
+                    <tr>
+                        <th>Producer</th>
+                        <th>Notable Accomplishments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-url="https://en.wikipedia.org/wiki/Dr._Dre">
+                        <td>Dr. Dre</td>
+                        <td>
+                            - Pioneered West Coast hip hop<br>
+                            - Produced albums for artists like Snoop Dogg, Eminem, and Kendrick Lamar<br>
+                            - Founder of Beats by Dre<br>
+                            - Multiple Grammy Awards
+                        </td>
+                    </tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Pharrell_Williams">
+                        <td>Pharrell Williams</td>
+                        <td>
+                            - Co-founder of The Neptunes<br>
+                            - Produced for artists like Jay-Z, Britney Spears, and Beyoncé<br>
+                            - Grammy-winning producer and artist<br>
+                            - Hits like "Happy" and "Get Lucky" (with Daft Punk)
+                        </td>
+                    </tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Quincy_Jones">
+                        <td>Quincy Jones</td>
+                        <td>
+                            - Produced Michael Jackson's "Thriller," the best-selling album of all time<br>
+                            - 28 Grammy Awards<br>
+                            - Collaborated with Frank Sinatra, Aretha Franklin, and more
+                        </td>
+                    </tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Rick_Rubin">
+                        <td>Rick Rubin</td>
+                        <td>
+                            - Co-founder of Def Jam Recordings<br>
+                            - Produced for artists like Metallica, Jay-Z, and Johnny Cash<br>
+                            - Known for working across genres, including rock, hip hop, and country<br>
+                            - Multiple Grammy Awards
+                        </td>
+                    </tr>
+                    <tr data-url="https://en.wikipedia.org/wiki/Timbaland">
+                        <td>Timbaland</td>
+                        <td>
+                            - Pioneered a unique, futuristic sound in hip hop and R&B<br>
+                            - Produced hits for Missy Elliott, Aaliyah, and Justin Timberlake<br>
+                            - Collaborated with artists like Jay-Z and Beyoncé<br>
+                            - Multiple Grammy Awards
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <div class="column-table">
+        <ul style="padding-left: 0; margin-top: 30px; list-style-type: none;">
+            <li><strong>Creative Expression</strong>: Making beats lets you express your emotions and ideas through music, allowing for endless creative possibilities.</li>
+            <li><strong>Experimentation</strong>: The process of trying out different sounds, patterns, and techniques is exciting and can lead to unexpected, amazing results.</li>
+            <li><strong>Satisfaction of Creation</strong>: There's a unique sense of accomplishment when you create a beat that you're proud of, especially when it evolves from an idea to a finished product.</li>
+        </ul>
+        <p style="padding-top: 40px;">Personally, I find some of the greatest joy in producing when I go back to look at old beats I made. Being able to compare old beats to my new ones and seeing how much progress I have made brings much satisfaction. Whether you are just making music for a personal emotional release, or trying to become one of the all-time greats, there is a spot in music production for you.</p>
+            <figure>
+                <img src="images/black-man-producing.jpeg" alt="Music Production" style="width: 100%; height: auto; padding-top: 50px;">
+                <figcaption class="home-caption">Prompt: Young Man Making Beats at Desktop</figcaption>
+                
+            </figure>
+            </div>
+            </div>
+        </section>
+        <section id="ai-prompts" class="section">
+            <h2>AI Prompts Used For This Website</h2>
+           
+            <table>
+                <caption>List of Prompts Used</caption>
+                <thead>
+                    <tr>
+                        <th>AI Prompt</th>
+                        <th>Purpose</th>
+                        <th>Results/Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>"Generate a table with the top 5 producers of all time and their accomplishments."</td>
+                        <td>To create a table listing the top producers and their key achievements.</td>
+                        <td>Created a table that lists the top 5 music producers with their notable accomplishments.</td>
+                    </tr>
+                    <tr>
+                        <td>"Suggest a good color palette for a website with a dark theme."</td>
+                        <td>To choose an appropriate color palette for a website with a dark theme.</td>
+                        <td>Suggested colors such as dark gray, teal, and gold, which work well with a dark theme.</td>
+                    </tr>
+                    <tr>
+                        <td>"Write a paragraph on the joy of making beats."</td>
+                        <td>To describe the creative and enjoyable process of making beats.</td>
+                        <td>Generated a paragraph highlighting the fun, creativity, and satisfaction of producing beats.</td>
+                    </tr>
+                    <tr>
+                        <td>"Create a clickable table row in HTML that redirects to a URL."</td>
+                        <td>To make a table row clickable and redirect to a link when clicked.</td>
+                        <td>Generated a working solution using JavaScript to make the entire row clickable and redirect to a URL.</td>
+                    </tr>
+                    <tr>
+                        <td>"How can I create a moveable and toggleable navigation bar in HTML and JavaScript?"</td>
+                        <td>To implement a navigation bar that can be toggled and moved around on the page.</td>
+                        <td>Generated a solution with HTML, CSS, and JavaScript to create a sidebar navigation bar that can be toggled with a button and smoothly animated.</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="components/script.js"></script>
+    <script>
+        // Add an event listener to each row
+    //GENERATED BY CHATGPT
+        const rows = document.querySelectorAll('#producer-table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                const url = row.getAttribute('data-url');
+                window.open(url, '_blank'); // Open the link in a new tab
+            });
+        });
+    </script>
+  
+
+      
+
+<footer>
+    <p style="text-align:center;">Page Designed By<a href="/itis3135/washingtoninc.co/index.html"> Wallaby Enterprises</a>&copy;</p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+      <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+     </a>
+     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+       </a>
+  </footer>
+  <script src="devinwashington.github.io/scripts/HTMLInclude.js"></script>
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+         document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+  </script>
+</body>
+
+</html>

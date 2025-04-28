@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devins Draining Wallaby - ITIS 3135 Drawing</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        #canvasContainer {
+            border: 2px solid #000;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .button-container {
+            margin: 10px;
+            display: flex;
+            gap: 10px;
+
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            margin-top: 60px; /* Space for fixed navbar */
+        }
+    </style>
+      <link rel="stylesheet" href="styles/default.css">
+
+</head>
+
+<header>
+    <div data-include="header.html"></div>
+
+    <h1>ITIS3135- Devin's Draining Wallaby</h1>
+ 
+</header>
+<body>
+    <main>
+
+    <h2>Draw in HTML!</h2>
+    <div id="canvasContainer">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+        <script src="scripts/sketch.js"></script>
+    </div>
+    <div class="button-container">
+        <button onclick="clearCanvas()">Clear Canvas</button>
+        <button onclick="saveCanvas()">Save Drawing</button>
+    </div>
+
+    <div data-include="footer.html"></div>
+
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    </main>
+</body>
+</html>

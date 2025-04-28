@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JpProd Resources</title>
+    <link rel="stylesheet" href="styles/client.css">
+    <style>
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            text-align: center;
+            margin: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section h2 .arrow {
+            margin-left: 10px;
+            font-size: 1.2em;
+        }
+        .tool {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .tool img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .tool-description {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+  
+        <div data-include="client_header.html"></div>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+
+<main>
+        <!-- DAWS -->
+
+<div class="container">
+    <div class="section" id="daws-section">
+        <h2>DAWs (Digital Audio Workstations) <span class="arrow">&#9660;</span></h2>
+        <div class="tool">
+            <img src="Images/my-fl-workstation.png" alt="DAW 1">
+            <div class="tool-description">
+                <h3>FL Studio21</h3>
+                <p>I mainly use <a href="https://www.image-line.com/fl-studio/" target="_blank">Fl Studio</a> when it comes to making beats. It is a program for entry-level producers, but its power should not be underestimated today. Most mainstream trap beats are made using this software, and the possibilites are truly endless when you learn it.</p>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="Images/ableton-suite.png" alt="DAW 2">
+            <div class="tool-description">
+                <h3>Ableton</h3>
+                <p><a href="https://www.ableton.com/en/" target="_blank">Ableton</a> is a DAW that I don't have as much experience in, but it's power cannot be underestimated. I find Ableton to be especially useful when I am wokring with genres outsite of trap, as it allows for a lot more experimentation.
+                    It is not as user-friendly as FL Studio, but it is a great tool for those who are willing to learn it.</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-- VSTs -->
+    <div class="section" id="vst-section">
+        <h2>VST Plugins <span class="arrow">&#9660;</span></h2>
+        <div class="tool">
+            <img src="Images/halftime-.jpeg" alt="Plugin 1">
+            <div class="tool-description">
+                <h3>HalfTime</h3>
+                <p><a href="https://www.cableguys.com/halftime" target="_blank">HalfTime</a> is a plugin that I use daily, and it helps me create melodies when I am lacking inspiration. It can be put on any mixer track, and it will half the tempo of the audio for that track. I especially like this plugin becuase you are able to cut certain frequencies from being processed, which allows for a lot of those muddier, lower frequences to be bypassed.</p>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="Images/xpand.jpeg" alt="Plugin 2">
+            <div class="tool-description">
+                <h3>Xpand!2</h3>
+                <p><a href="https://www.airmusictech.com/virtual-instruments/xpand-2/" target="_blank">Xpand!2</a> is a plugin I have only recently started incorpororating more into my workflow, but it has already become one of my favorite generator plugins. The ability to layer 4 sounds in one instance of Xpand is its best feature, and its stock sounds/effects are really all you need to make whatever genre of music you want.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Hardware -->
+    <div class="section" id="hardware-section">
+        <h2>Hardware <span class="arrow">&#9660;</span></h2>
+        <div class="tool">
+            <img src="Images/volt1.jpeg" alt="Hardware 1">
+            <div class="tool-description">
+                <h3>Volt1 Audio Interace</h3>
+                <p>At home, I use the <a href="https://www.uaudio.com/products/volt-1-usb?srsltid=AfmBOorWpOGbbEXg8PhFqPELvz6G4LRfb0wBJXFO3jBTvEgGdakKDRVt" target="_blank">Volt1</a> audio interface. It is not best interface on the market, it is also is not the most expensive. This, or the more popular FocusRite are great options for new producers, or even just as a small portable interface I can travel with. </p>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="Images/kontakt-keyboard.jpg" alt="Hardware 2">
+            <div class="tool-description">
+                <h3>Kontakt S61 Midi Keyboard</h3>
+                <p><a href="https://www.amazon.com/Native-Instruments-Komplete-S61-Mk2/dp/B075FRXPM7" target="_blank">The Kontakt S61 Mk2</a> is my main midi keyboard, and it has helped me produce almost all of my beats. It has 61 keys, with built in buttons for things like recording, pausing and even changing instruments. I was lucky enough to find one for about 5$ at a GoodWill, but brand new these keyboards are not cheap.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+    <!-- Script to hide sections -->
+<script>
+    document.querySelectorAll('.section h2').forEach(header => {
+        header.addEventListener('click', () => {
+            const section = header.parentElement;
+            const tools = section.querySelectorAll('.tool');
+            tools.forEach(tool => {
+                if (tool.style.display === 'none') {
+                    tool.style.display = 'flex';
+                    header.querySelector('.arrow').innerHTML = '&#9660;';
+                } else {
+                    tool.style.display = 'none';
+                    header.querySelector('.arrow').innerHTML = '&#9654;';
+                }
+            });
+        });
+    });
+</script>
+<div data-include="client_footer.html"></div>
+<script src="HTMLIncludeClient.js"></script>
+
+</body>
+
+</html>

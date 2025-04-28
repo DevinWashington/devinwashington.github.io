@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(205, 209, 255);
+    text-align: center;
+    color: rgb(0,0,100);
+    font-family:'Verdana', 'Arial Narrow', Arial, sans-serif;
+
+}
+a{
+    color:brown;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: line;
+}
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+h2{
+    text-align: center;
+}
+main { max-width: 1200px; /* Adjust as needed */ 
+    width: 90%; /* Adjust percentage based on design requirements */ 
+    margin: 0 auto; /* Centers the content horizontally */ 
+}
+
+p{
+    text-align: center;
+}
+nav{
+    text-align: center;
+}
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color:yellow;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        background-color:orange;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color:red;
+    }
+}

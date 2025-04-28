@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Overview</title>
+    <style>
+        nav{
+            top:0;
+        }
+        .image-container {
+            position: relative;
+                        display: flex;
+                        align-items: center;
+
+
+            display: inline-block;
+            margin: 20px;
+        }
+        body {
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 10px;
+            padding:10px;
+            background-color: #f0f8ff; 
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        .image-container img {
+            width: 600px;
+            height: 300px;
+            transition: transform 0.2s;
+            cursor: zoom-in;
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+        }
+        a {
+    color: #e74c3c; /* Red color for links */
+    text-decoration: none;
+}
+a:visited {
+            color: #9b59b6; /* Purple color for visited link */
+        }
+
+        /* Style for link on hover */
+        a:hover {
+            color: #3498db /* Red color when hovered */
+        }
+    </style>
+    
+</head>
+<div data-include="header.html"></div>
+<body>
+    <h1>Client Project</h1>
+    <h2>Project Overview</h2>
+    <p>This website is being created to show case Pinos Prodcution's skills and body of work. It will also allow users to contact him. </p>
+    <p><strong>Users:</strong> Producers, Rappers, Label Employees (T&R)</p>
+    <ul>
+        <p><strong>Content</strong></p>
+        <li><strong>Producers:</strong> Upload beats, listen to Pinos beats, contact Pinos</li>
+        <li><strong>Rappers:</strong> Listen to Pinos beats, contact Pinos</li>
+        <li><strong>Label Employees:</strong> Listen to Pinos beats, contact Pinos for employment opportunity</li>
+    </ul>
+    <h3>Client Information</h3>
+    <p><strong>Name: </strong>Jake P.</p>
+    <p><strong>Email: </strong>jpprodcutions910@gmail.com</p>
+    <p><strong>Phone: </strong>[private]</p>
+    <p><strong>Company: </strong>Pinos Productions</p>
+    <h3>Project Description</h3>
+    
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <main>
+    <div class="image-container">
+        <img src="clientProject/Images/clientSiteMap.png" alt="Image 1">
+        <div class="caption">Site Map</div>
+    </div>
+    <div class="image-container">
+        <img src="clientProject/Images/clientWireFrame.png" alt="Image 2">
+        <div class="caption">Home Page WireFrame</div>
+    </div>
+    <h3>Dynamic Functionality</h3>
+    <p>For this p, the main functionality will be the ability to listen to beats, and to upload beats or request services.</p>
+    <ul>
+        <li><a href="https://jumpshare.com/file-sharing/mp3" target="_blank">JumpShare</a>: Upload an Mp3</li>
+        <li><a href="https://doc.arkansas.gov/online-services-center/" target="_blank">Arkansas Government</a>: Contact through an email template</li>
+    </ul>
+    <h3><a href="clientProject/index.html">Click Here To See The Progress!</a></h3>
+<!-- Script for zoom -->    
+ <script>
+        document.querySelectorAll('.image-container img').forEach=(img) => {
+            let scale = 1;
+            img.addEventListener('click', () => {
+                scale += 0.5;
+                img.style.transform = `scale(${scale})`;
+                img.style.cursor = scale > 1 ? 'zoom-out' : 'zoom-in';
+            });
+            img.addEventListener('dblclick', () => {
+                scale = 1;
+                img.style.transform = `scale(${scale})`;
+                img.style.cursor = 'zoom-in';
+            });
+        };
+    </script>
+    </main>
+    <footer>
+       
+  <p>Page Designed By<a href="/itis3135/washingtoninc.co/index.html"> Washington Enterprises</a>&copy;</p>
+  <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+    <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+   </a>
+   <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+     </a>
+     <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+             document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+           
+      </footer>
+      <script src="/itis3135/scripts/HTMLInclude.js"></script>
+</body>
+</html>

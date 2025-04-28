@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd; /* Light grey border */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light grey background for header */
+            font-weight: bold;
+        }
+
+       
+
+        tr:hover {
+            background-color: #eaeaea; /* Highlight row on hover */
+        }
+        .complex-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .complex-table th, .complex-table td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .complex-table th {
+            background-color: darkslategrey; /* Darker header */
+            color: white;
+        }
+
+        .complex-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light row */
+        }
+
+        .complex-table tr:nth-child(odd) {
+            background-color: #ffffff; /* Darker row */
+        }
+
+        figure {
+            font-family: Arial, sans-serif;
+        }
+        .complex-table  tr:hover {
+            background-color: #eaeaea; /* Highlight row on hover */
+        }
+
+        figcaption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+             font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <main>
+    <h2>HTML Tables</h2>
+    <h3>My Tabluar Data</h3>
+    <ul>
+        <li>
+            <strong>Devin Washington</strong><br>
+            Years at Draining Wallaby: 5<br>
+            Email: WallabyMaster@gmail.com
+        </li>
+        <li>
+            <strong>Alice Green</strong><br>
+            Years at Draining Wallaby: 12<br>
+            Email: alicegreen@example.com
+        </li>
+        <li>
+            <strong>Bob Lee</strong><br>
+            Years at Draining Wallaby: 17<br>
+            Email: boblee@example.com
+        </li>
+        <li>
+            <strong>Charlie Brown</strong><br>
+            Years at Draining Wallaby: 14<br>
+            Email: charliebrown@example.com
+        </li>
+        <li>
+            <strong>David Clark</strong><br>
+            Years at Draining Wallaby: 8<br>
+            Email: davidclark@example.com
+        </li>
+        <li>
+            <strong>Eva Adams</strong><br>
+            Years at Draining Wallaby: 20<br>
+            Email: evaadams@example.com
+        </li>
+        <li>
+            <strong>Frank Harris</strong><br>
+            Years at Draining Wallaby: 19<br>
+            Email: frankharris@example.com
+        </li>
+        <li>
+            <strong>Grace King</strong><br>
+            Years at Draining Wallaby: 3<br>
+            Email: graceking@example.com
+        </li>
+        <li>
+            <strong>Hannah Scott</strong><br>
+            Years at Draining Wallaby: 15<br>
+            Email: hannahscott@example.com
+        </li>
+        <li>
+            <strong>Ian Walker</strong><br>
+            Years at Draining Wallaby: 9<br>
+            Email: ianwalker@example.com
+        </li>
+    </ul>
+    
+    <h3>Employee Data in a Simple Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Years at Draining Wallaby!</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Devin Washington</td>
+                <td>5</td>
+                <td>WallabyMaster@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Alice Green</td>
+                <td>12</td>
+                <td>alicegreen@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Bob Lee</td>
+                <td>17</td>
+                <td>boblee@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Charlie Brown</td>
+                <td>14</td>
+                <td>charliebrown@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>David Clark</td>
+                <td>8</td>
+                <td>davidclark@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Eva Adams</td>
+                <td>20</td>
+                <td>evaadams@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Frank Harris</td>
+                <td>19</td>
+                <td>frankharris@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Grace King</td>
+                <td>3</td>
+                <td>graceking@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Hannah Scott</td>
+                <td>15</td>
+                <td>hannahscott@wallabymail.com</td>
+            </tr>
+            <tr>
+                <td>Ian Walker</td>
+                <td>9</td>
+                <td>ianwalker@wallabymail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Employee Data in a Complex Table</h3>
+    <figure>
+       
+        <table class="complex-table">
+            <thead>
+                <tr>
+                    <th scope="col" id="department">Department</th>
+                    <th scope="col" id="name">Name</th>
+                    <th scope="col" id="email">Email</th>
+                    <th scope="col" id="duration">Years at Draining Wallaby!</th>
+                    <th scope="col" id="salary-monthly">Monthly Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="1" id="department-1">CEO</td>
+                    <td id="name-1">Devin Washington</td>
+                    <td id="email-1">WallabyMaster@wallabymail.com</td>
+                    <td id="duration-1">21</td>
+                    <td id="salary-monthly-1">$15,000</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" id="department-2">Marketing</td>
+                    <td id="name-2">Alice Green</td>
+                    <td id="email-2">alicegreen@wallabymail.com</td>
+                    <td id="duration-2">12</td>
+                    <td id="salary-monthly-2">$6,200</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" id="department-3">Sales</td>
+                    <td id="name-3">Bob Lee</td>
+                    <td id="email-3">boblee@wallabymail.com</td>
+                    <td id="duration-3">17</td>
+                    <td id="salary-monthly-3">$7,500</td>
+                </tr>
+                <tr>
+                    <td id="name-4">Charlie Brown</td>
+                    <td id="email-4">charliebrown@wallabymail.com</td>
+                    <td id="duration-4">14</td>
+                    <td id="salary-monthly-4">$7,000</td>
+                </tr>
+                <tr>
+                    <td id="name-5">David Clark</td>
+                    <td id="email-5">davidclark@wallabymail.com</td>
+                    <td id="duration-5">8</td>
+                    <td id="salary-monthly-5">$6,800</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" id="department-4">HR</td>
+                    <td id="name-6">Eva Adams</td>
+                    <td id="email-6">evaadams@wallabymail.com</td>
+                    <td id="duration-6">20</td>
+                    <td id="salary-monthly-6">$8,000</td>
+                </tr>
+                <tr>
+                    <td id="name-7">Frank Harris</td>
+                    <td id="email-7">frankharris@wallabymail.com</td>
+                    <td id="duration-7">19</td>
+                    <td id="salary-monthly-7">$7,800</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" id="department-5">Operations</td>
+                    <td id="name-8">Grace King</td>
+                    <td id="email-8">graceking@wallabymail.com</td>
+                    <td id="duration-8">3</td>
+                    <td id="salary-monthly-8">$5,200</td>
+                </tr>
+                <tr>
+                    <td id="name-9">Hannah Scott</td>
+                    <td id="email-9">hannahscott@wallabymail.com</td>
+                    <td id="duration-9">15</td>
+                    <td id="salary-monthly-9">$6,400</td>
+                </tr>
+                <tr>
+                    <td id="department-6">IT</td>
+                    <td id="name-10">Ian Walker</td>
+                    <td id="email-10">ianwalker@wallabymail.com</td>
+                    <td id="duration-10">9</td>
+                    <td id="salary-monthly-10">$6,000</td>
+                </tr>
+                
+                <!-- Total row -->
+                <tr>
+                    <th colspan="3">Total Years of Service</th>
+                    <td>102</td>
+                    <td>$76,900</td>
+                </tr>
+            </tbody>
+        </table>
+        <figcaption>Employee Information</figcaption>
+    </figure>
+</main>
+    <footer>
+        <div data-include="footer.html"></div>
+           
+      </footer>
+      <script src="scripts/HTMLInclude.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Slideshow</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        body {
+            display: absolute;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding-top: 30px;;
+        }
+        .slide {
+            display: none;
+        }
+        .slide img {
+            width: 100%;
+            max-width: 800px;
+            max-height: 700px;
+            border-radius: 10px;
+        }
+        .caption-container {
+            text-align: center;
+            padding: 10px;
+            font-size: 22px;
+        }
+        .nav-buttons {
+            display: flex;
+            width: 80%;
+            max-width: 800px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+        
+        .prev, .next {
+            cursor: pointer;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.6s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            user-select: none;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        ul{
+            list-style-type:circle;
+            margin: 0;
+            padding-left: 20px;
+            text-align: left
+        }
+.container {
+     display: flex;
+ justify-content: space-around;
+ width: 80%;
+ margin: 0 auto;
+ }
+ .column {
+ width: 45%;
+ }
+ ul {
+ list-style-type: none;
+ padding: 5px;
+ }
+ li {
+ margin: 5px 5px;
+ }
+
+        
+    </style>
+      <link rel="stylesheet" href="styles/default.css">
+
+</head>
+<body>
+    <div data-include="header.html"></div>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+<div class="slideshow-container">
+    <div class="slide active">
+        <img src="images/slideshow_images/slideshow_desk.jpeg" alt="Image 1">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_egg.jpeg" alt="Image 2">
+    </div>
+    <!-- Add more slides as needed -->
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_violin.jpeg" alt="Image 3">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_iron.jpeg" alt="Image 4">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_necklace.jpeg" alt="Image 5">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_watch.jpeg" alt="Image 6">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_apple.jpeg" alt="Image 7">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_scissors.jpeg" alt="Image 8">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_hammer.jpeg" alt="Image 9">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_ice.jpeg" alt="Image 10">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_newspaper.jpeg" alt="Image 11">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_guitar.jpeg" alt="Image 12">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_television.jpeg" alt="Image 13">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_orange.jpeg" alt="Image 14">
+    </div>
+    <div class="slide">
+        <img src="images/slideshow_images/slideshow_notebook.jpeg" alt="Image 15">
+    </div>
+</div>
+
+
+<div class="caption-container" id="caption"></div>
+
+<div class="nav-buttons">
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<h2>Google Gemini Was Used To Generate All Images</h2>
+
+<div class="container">
+    <div class="column">
+    <ul>
+    <li>Generate an Image of D- Desk</li>
+    <li>Generate an Image of E- Egg</li>
+    <li>Generate an Image of V- Violin</li>
+    <li>Generate an Image of I- Iron</li>
+     <li>Generate an Image of N- Necklace</li>
+     <li>Generate an Image of W- Watch</li>
+     <li>Generate an Image of A- Apple</li>
+     <li>Generate an Image of S- Scissors</li>
+     <li>Generate an Image of H- Hammer</li>
+     <li>Generate an Image of I- Ice</li>
+     <li>Generate an Image of N- Newspaper</li>
+     <li>Generate an Image of G- Guitar</li>
+     <li>Generate an Image of T- Television</li>
+     <li>Generate an Image of O- Orange</li>
+     <li>Generate an Image of N- Notebook</li>
+     </ul>
+     </div>
+     <div class="column">
+        <ul>
+            <li><a href="images/slideshow_images/slideshow_desk.jpeg" download>Desk</a></li>
+            <li><a href="images/slideshow_images/slideshow_egg.jpeg" download>Egg</a></li>
+            <li><a href="images/slideshow_images/slideshow_violin.jpeg" download>Violin</a></li>
+            <li><a href="images/slideshow_images/slideshow_iron.jpeg" download>Iron</a></li>
+            <li><a href="images/slideshow_images/slideshow_necklace.jpeg" download>Necklace</a></li>
+            <li><a href="images/slideshow_images/slideshow_watch.jpeg" download>Watch</a></li>
+            <li><a href="images/slideshow_images/slideshow_apple.jpeg" download>Apple</a></li>
+            <li><a href="images/slideshow_images/slideshow_scissors.jpeg" download>Scissors</a></li>
+            <li><a href="images/slideshow_images/slideshow_hammer.jpeg" download>Hammer</a></li>
+            <li><a href="images/slideshow_images/slideshow_ice.jpeg" download>Ice</a></li>
+            <li><a href="images/slideshow_images/slideshow_newspaper.jpeg" download>Newspaper</a></li>
+            <li><a href="images/slideshow_images/slideshow_guitar.jpeg" download>Guitar</a></li>
+            <li><a href="images/slideshow_images/slideshow_television.jpeg" download>Television</a></li>
+            <li><a href="images/slideshow_images/slideshow_orange.jpeg" download>Orange</a></li>
+            <li><a href="images/slideshow_images/slideshow_notebook.jpeg" download>Notebook</a></li>
+        </ul>
+        
+     </div>
+     </div>
+    
+
+<script>
+    let slideIndex = 0;
+    // Array of captions for each image in order
+    let captions = [
+        "D- Desk",
+        "E- Egg",
+        "V- Violin",
+        "I- Iron",
+        "N- Necklace",
+        "W- Watch",
+        "A- Apple",
+        "S- Scissors",
+        "H- Hammer",
+        "I- Ice",
+        "N- Newspaper",
+        "G- Guitar",
+        "T- Television",
+        "O- Orange",
+        "N- Notebook"
+    ];
+
+   
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+        document.getElementById("caption").innerText = captions[slideIndex];
+    }
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    showSlides(slideIndex);
+    
+</script>
+<div data-include="footer.html"></div>
+           
+<script src="scripts/HTMLInclude.js"></script>
+
+
+</body>
+</html>

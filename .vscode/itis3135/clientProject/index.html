@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JpProductions910 Home</title>
+    <link rel="stylesheet" href="styles/client.css">
+    <style>
+        
+       
+       
+        .slideshow-container {
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+
+
+
+        .slides {
+            display: none;
+        }
+       
+        
+        .column-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .column {
+            flex: 50%;
+            padding: 20px;
+        }
+        .column h2 {
+            text-align: center;
+        }
+        .slideshow-container img {
+            width: 100%;
+            height: 500px; /* Set a fixed height */
+            object-fit: cover; /* Ensure the image covers the entire area */
+        }
+
+    </style>
+</head>
+
+    <div data-include="client_header.html"></div>
+
+<body>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+<main>
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+    <div class="slides">
+        <img src="Images/home-recording-slide.jpeg" alt="Image 1">
+        <div class="text">Recording Studio</div>
+    </div>
+    <div class="slides">
+        <img src="Images/serum2-by-xfer.png" alt="Image 2">
+        <div class="text">"Serum 2" By Xfer, Inc.</div>
+    </div>
+    <div class="slides">
+        <img src="Images/my-fl-workstation.png" alt="Image 3">
+        <div class="text">My FL-Studio 21 Workstation</div>
+    </div>
+</div>
+    <!-- column 1 -->
+
+<div class="column-container">
+    <div class="column">
+        <h2>JP</h2>
+        <p>Welcome to my studio! This is JpProductions, and I offer many services for rappers and producers.</p>
+        <ul>
+        <li>I specialize in mixing and mastering beats for artists.</li>
+        <li>There are beats for sale on this site, and don't hesitiate to contact me for personal beats.</li>
+        <li>You can even <a href="user-upload.html">send</a> me your work if your are looking for a collaboration.</li>
+        </ul>   
+        <p>At JpProductions, I bring a unique blend of creativity and technical expertise to every project. 
+            As a dedicated solo music producer, I specialize in crafting high-quality, innovative soundscapes that capture the essence of your artistic vision. 
+            With a keen ear for detail and a passion for excellence, I offer personalized production services tailored to meet the needs of both emerging and established artists. 
+            Let's collaborate to transform your musical ideas into polished, professional tracks that stand out in the industry.</p>
+
+    </div>
+        <!-- column 2 -->
+
+    <div class="column">
+        <h2>Column 2</h2>
+        <p>This is some text for the second column. You can add more content here as needed. This can be your profesional description</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>  
+    </div>
+</div>
+</main>
+</body>
+
+<script>
+    let slideIndex = 0;
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1;}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    showSlides();
+
+   
+</script>
+<div data-include="client_footer.html"></div>
+<script src="HTMLIncludeClient.js"></script>
+
+
+</html>
