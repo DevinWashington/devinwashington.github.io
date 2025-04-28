@@ -23,9 +23,31 @@ main{
 h2{
     text-align: center;
 }
+main { max-width: 1200px; /* Adjust as needed */ 
+    width: 90%; /* Adjust percentage based on design requirements */ 
+    margin: 0 auto; /* Centers the content horizontally */ 
+}
+
 p{
     text-align: center;
 }
 nav{
     text-align: center;
+}
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color:yellow;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        background-color:orange;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color:red;
+    }
 }
